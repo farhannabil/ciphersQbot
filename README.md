@@ -2,7 +2,12 @@
 stake.com, stake.us, primedice bot by me with ❤
 
 a javascript coded bot for Stake, Primedice<br />
-the strategy script must be coded in javascript (JsMode), or can run Lua script too. (LuaMode) 
+the strategy script must be coded in javascript (JsMode), or can run Lua script too. (LuaMode)
+
+## 🌐 Website
+Visit our landing page: **[https://farhannabil.github.io/ciphersQbot/](https://farhannabil.github.io/ciphersQbot/)**
+
+The website automatically deploys from the main branch via GitHub Actions whenever changes are pushed.
 
 # Videos: <br /> 
 install extension: [https://vimeo.com/1092943750](https://vimeo.com/1092943750) <br />
