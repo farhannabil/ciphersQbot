@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EvilBot - Advanced betting automation bot for Stake.com and Primedice">
+    <title>EvilBot - Stake & Primedice Automation</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 2px solid #00d4ff;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            color: #00d4ff;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        header p {
+            font-size: 1.3em;
+            color: #bbb;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
+
+        .download-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+            margin: 10px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 25px rgba(0, 212, 255, 0.6);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .feature-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #00d4ff;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .feature-card h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .installation {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .installation h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .installation ol {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+
+        .installation li {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        .video-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .video-section h2 {
+            color: #00d4ff;
+            margin-bottom: 30px;
+        }
+
+        .video-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .video-link {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px 30px;
+            border-radius: 10px;
+            border: 1px solid #00d4ff;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .video-link:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .supported-games {
+            padding: 40px 20px;
+        }
+
+        .supported-games h2 {
+            color: #00d4ff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .game-tag {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .contact-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .contact-section h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-link {
+            color: #00d4ff;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 2px solid #00d4ff;
+            margin-top: 40px;
+        }
+
+        .disclaimer {
+            background: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .disclaimer h3 {
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎮 #evilbot</h1>
+        <p>Advanced Betting Automation for Stake.com & Primedice</p>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <img src="https://github.com/user-attachments/assets/4eef67cb-d36a-428c-ba40-f66edc219ad6" alt="EvilBot Screenshot" width="1123" height="676">
+        </div>
+
+        <div class="disclaimer">
+            <h3>⚠️ IMPORTANT DISCLAIMER</h3>
+            <p><strong>Educational Purpose Only:</strong> This bot is provided for educational and research purposes only. Gambling involves significant financial risk.</p>
+            <p><strong>Terms of Service:</strong> Using automation tools may violate the terms of service of gambling platforms. Use at your own risk.</p>
+            <p><strong>Legal Notice:</strong> Online gambling may be illegal in your jurisdiction. Check your local laws before using this software.</p>
+            <p><strong>Addiction Warning:</strong> Gambling can be addictive. If you or someone you know has a gambling problem, seek help immediately.</p>
+            <p><strong>No Liability:</strong> The developer assumes no responsibility for any losses, damages, or legal issues that may arise from the use of this software.</p>
+        </div>
+
+        <div class="download-section">
+            <h2>Get Started</h2>
+            <p style="margin: 20px 0;">Download the extension and start automating your betting strategies</p>
+            <a href="https://github.com/farhannabil/ciphersQbot/archive/refs/heads/main.zip" class="download-btn">📥 Download Extension</a>
+            <a href="https://github.com/farhannabil/ciphersQbot" class="download-btn">⭐ View on GitHub</a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>🚀 JavaScript & Lua Support</h3>
+                <p>Write your betting strategies in JavaScript or Lua. Full flexibility to implement any betting system you can imagine.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎯 25+ Games Supported</h3>
+                <p>Supports Dice, Limbo, Crash, Plinko, Mines, Keno, Blackjack, Roulette, Hilo, and many more casino games.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📊 Real-time Statistics</h3>
+                <p>Track your betting performance with live stats, charts, and detailed bet history.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Fast Mode</h3>
+                <p>Enable fast mode for rapid bet execution. Perfect for testing strategies quickly.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Secure & Private</h3>
+                <p>Runs entirely in your browser. No data is sent to external servers. Your API keys stay safe.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎨 Code Editor</h3>
+                <p>Built-in CodeMirror editor with syntax highlighting for writing and testing strategies.</p>
+            </div>
+        </div>
+
+        <div class="installation">
+            <h2>📦 Installation Guide</h2>
+            <ol>
+                <li>Download the extension files from GitHub (click the download button above)</li>
+                <li>Extract the ZIP file to a folder on your computer</li>
+                <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+                <li>Enable "Developer mode" in the top right corner</li>
+                <li>Click "Load unpacked" and select the extracted folder</li>
+                <li>The extension icon should appear in your Chrome toolbar</li>
+                <li>Navigate to Stake.com or PrimeDice and the bot will automatically load</li>
+            </ol>
+        </div>
+
+        <div class="video-section">
+            <h2>📹 Video Tutorials</h2>
+            <div class="video-links">
+                <a href="https://vimeo.com/1092943750" target="_blank" class="video-link">
+                    <h3>Installation Guide</h3>
+                    <p>Learn how to install the extension</p>
+                </a>
+                <a href="https://www.youtube.com/watch?v=9io2MuZwfCY" target="_blank" class="video-link">
+                    <h3>Demo & Usage</h3>
+                    <p>See the bot in action</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="supported-games">
+            <h2>🎲 Supported Games</h2>
+            <div class="games-grid">
+                <div class="game-tag">Dice</div>
+                <div class="game-tag">Limbo</div>
+                <div class="game-tag">Crash</div>
+                <div class="game-tag">Slide</div>
+                <div class="game-tag">Plinko</div>
+                <div class="game-tag">Mines</div>
+                <div class="game-tag">Keno</div>
+                <div class="game-tag">Wheel</div>
+                <div class="game-tag">Blackjack</div>
+                <div class="game-tag">Roulette</div>
+                <div class="game-tag">Baccarat</div>
+                <div class="game-tag">Hilo</div>
+                <div class="game-tag">Dragon Tower</div>
+                <div class="game-tag">Flip</div>
+                <div class="game-tag">Rock Paper Scissors</div>
+                <div class="game-tag">Chicken</div>
+                <div class="game-tag">Drill</div>
+                <div class="game-tag">Tarot</div>
+                <div class="game-tag">Packs</div>
+                <div class="game-tag">Bars</div>
+                <div class="game-tag">Pump</div>
+                <div class="game-tag">Snakes</div>
+                <div class="game-tag">Cases</div>
+                <div class="game-tag">Darts</div>
+                <div class="game-tag">Diamonds</div>
+                <div class="game-tag">Blue Samurai</div>
+                <div class="game-tag">Scarab Spin</div>
+                <div class="game-tag">Tome of Life</div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>💬 Support & Contact</h2>
+            <p>Need help or want to contribute? Reach out!</p>
+            <div class="contact-links">
+                <a href="https://t.me/poky_1084" target="_blank" class="contact-link">📱 Telegram</a>
+                <span style="color: #00d4ff;">Discord: fisk_992</span>
+                <span style="color: #00d4ff;">Stake: poky1084</span>
+            </div>
+            <p style="margin-top: 20px;">
+                <a href="https://ko-fi.com/poky" target="_blank" class="download-btn" style="background: linear-gradient(135deg, #ff5f6d 0%, #ffc371 100%);">
+                    ☕ Support Development
+                </a>
+            </p>
+            <p style="margin-top: 20px; color: #bbb;">
+                ⭐ If you like this project, please give it a star on GitHub!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 #evilbot - Made with ❤️</p>
+        <p style="margin-top: 10px; color: #888;">For educational purposes only. Gamble responsibly.</p>
+    </footer>
+</body>
+</html>
