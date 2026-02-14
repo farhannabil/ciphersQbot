@@ -384,3 +384,40 @@ function round(){
     return HILO_SKIP;
 }
  ```
+
+# 💡 Fibonacci Betting Strategies
+
+For optimal betting strategies to maximize wins, check out **[FIBONACCI_STRATEGIES.js](FIBONACCI_STRATEGIES.js)** which includes:
+
+- **5 Complete Strategy Examples** - From basic to advanced Fibonacci implementations
+- **Risk-Adjusted Sequences** - Conservative, Moderate, Aggressive, and Ultra-Safe options
+- **Bankroll Management** - Strategies that adapt to your balance
+- **Safety Features** - Loss limits and profit targets built-in
+- **10 Pro Tips** - Expert advice for maximizing wins with Fibonacci progression
+
+**Quick Start - Basic Fibonacci Strategy:**
+```javascript
+game = "dice"
+chance = 49.5
+bethigh = false
+basebet = 0.00000001
+nextbet = basebet
+fibonacci = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+fibIndex = 0
+
+function dobet() {
+    if (win) {
+        fibIndex = Math.max(0, fibIndex - 2)  // Go back 2 steps
+    } else {
+        fibIndex = Math.min(fibIndex + 1, fibonacci.length - 1)  // Move forward
+    }
+    nextbet = basebet * fibonacci[fibIndex]
+}
+```
+
+**Optimal Fibonacci Sequences by Risk Level:**
+- **Conservative**: `[1, 1, 2, 3, 5, 8, 13, 21]` - Safer, slower recovery
+- **Moderate**: `[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]` - Balanced risk/reward
+- **Aggressive**: `[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377]` - Faster recovery, higher risk
+
+See [FIBONACCI_STRATEGIES.js](FIBONACCI_STRATEGIES.js) for complete implementations and more strategies.
