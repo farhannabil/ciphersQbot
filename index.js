@@ -10965,10 +10965,10 @@ function crashclick(json) {
 						document.getElementById("botLosses").innerHTML = losses;
 						document.getElementById("botCurrentStreak").innerHTML = currentstreak;
 						document.getElementById("botHighLowStreak").innerHTML = Math.max.apply(null, highest_streak) + " / " + Math.min.apply(null, lowest_streak);
-						document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-						document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+						document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+						document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 						
-						lastBet.percent = (profit_total / started_bal * 100)
+						lastBet.percent = started_bal > 0 ? (profit_total / started_bal * 100) : 0
 		}
 }
 
@@ -13138,10 +13138,10 @@ function data(json){
 			document.getElementById("botLosses").innerHTML = losses;
 			document.getElementById("botCurrentStreak").innerHTML = currentstreak;
 			document.getElementById("botHighLowStreak").innerHTML = Math.max.apply(null, highest_streak) + " / " + Math.min.apply(null, lowest_streak);
-			document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-			document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+			document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+			document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 			
-			lastBet.percent = (profit_total / started_bal * 100)
+			lastBet.percent = started_bal > 0 ? (profit_total / started_bal * 100) : 0
 		}
 		if (gameType === "diceRoll" || gameType === "limboBet"){
 			if(gameUI){
@@ -13674,10 +13674,10 @@ function RunSimDice(){
 			document.getElementById("botLosses").innerHTML = losses;
 			document.getElementById("botCurrentStreak").innerHTML = currentstreak;
 			document.getElementById("botHighLowStreak").innerHTML = Math.max.apply(null, highest_streak) + " / " + Math.min.apply(null, lowest_streak);
-			document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-			document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+			document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+			document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 			
-			lastBet.percent = (profit_total / started_bal * 100)
+			lastBet.percent = started_bal > 0 ? (profit_total / started_bal * 100) : 0
 				
 				
 
@@ -13843,8 +13843,8 @@ function resetstats(){
 	profit = profit_total;
 	currentprofit = current_profit;
 	bets = betcount;
-	document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-	document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+	document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+	document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 	
 	
 	resetChart();
@@ -14521,10 +14521,10 @@ function startSocket() {
 						document.getElementById("botLosses").innerHTML = losses;
 						document.getElementById("botCurrentStreak").innerHTML = currentstreak;
 						document.getElementById("botHighLowStreak").innerHTML = Math.max.apply(null, highest_streak) + " / " + Math.min.apply(null, lowest_streak);
-						document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-						document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+						document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+						document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 						
-						lastBet.percent = (profit_total / started_bal * 100)
+						lastBet.percent = started_bal > 0 ? (profit_total / started_bal * 100) : 0
 					
 					
 						
@@ -14729,10 +14729,10 @@ function startSocket() {
 						document.getElementById("botLosses").innerHTML = losses;
 						document.getElementById("botCurrentStreak").innerHTML = currentstreak;
 						document.getElementById("botHighLowStreak").innerHTML = Math.max.apply(null, highest_streak) + " / " + Math.min.apply(null, lowest_streak);
-						document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-						document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+						document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+						document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 						
-						lastBet.percent = (profit_total / started_bal * 100)
+						lastBet.percent = started_bal > 0 ? (profit_total / started_bal * 100) : 0
 						
 	
 						
@@ -15475,10 +15475,10 @@ function startSocket() {
 								document.getElementById("botLosses").innerHTML = losses;
 								document.getElementById("botCurrentStreak").innerHTML = currentstreak;
 								document.getElementById("botHighLowStreak").innerHTML = Math.max.apply(null, highest_streak) + " / " + Math.min.apply(null, lowest_streak);
-								document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-								document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+								document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+								document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 								
-								lastBet.percent = (profit_total / started_bal * 100)
+								lastBet.percent = started_bal > 0 ? (profit_total / started_bal * 100) : 0
 								//currentcount += 1
 								
 								
@@ -15667,10 +15667,10 @@ function startSocket() {
 								document.getElementById("botLosses").innerHTML = losses;
 								document.getElementById("botCurrentStreak").innerHTML = currentstreak;
 								document.getElementById("botHighLowStreak").innerHTML = Math.max.apply(null, highest_streak) + " / " + Math.min.apply(null, lowest_streak);
-								document.getElementById("botPercentProfit").innerHTML = (profit_total / started_bal * 100).toFixed(2);
-								document.getElementById("botPercentWagered").innerHTML = (wagered / started_bal).toFixed(2);
+								document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profit_total / started_bal * 100).toFixed(2) : "0.00";
+								document.getElementById("botPercentWagered").innerHTML = started_bal > 0 ? (wagered / started_bal).toFixed(2) : "0.00";
 								
-								lastBet.percent = (profit_total / started_bal * 100)
+								lastBet.percent = started_bal > 0 ? (profit_total / started_bal * 100) : 0
 								//currentcount += 1;
 								
 								
