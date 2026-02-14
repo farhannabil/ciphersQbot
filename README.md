@@ -387,13 +387,15 @@ function round(){
 
 # 💡 Fibonacci Betting Strategies
 
-For optimal betting strategies to maximize wins, check out **[FIBONACCI_STRATEGIES.js](FIBONACCI_STRATEGIES.js)** which includes:
+For alternative betting progression strategies, check out **[FIBONACCI_STRATEGIES.js](FIBONACCI_STRATEGIES.js)** which includes:
+
+**⚠️ DISCLAIMER**: No betting strategy can guarantee wins in games with house edge. These are risk management approaches for demonstration and educational purposes. Always gamble responsibly.
 
 - **5 Complete Strategy Examples** - From basic to advanced Fibonacci implementations
 - **Risk-Adjusted Sequences** - Conservative, Moderate, Aggressive, and Ultra-Safe options
 - **Bankroll Management** - Strategies that adapt to your balance
 - **Safety Features** - Loss limits and profit targets built-in
-- **10 Pro Tips** - Expert advice for maximizing wins with Fibonacci progression
+- **10 Pro Tips** - Expert advice for using Fibonacci progression responsibly
 
 **Quick Start - Basic Fibonacci Strategy:**
 ```javascript

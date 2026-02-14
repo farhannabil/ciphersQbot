@@ -1,11 +1,13 @@
 /**
  * Fibonacci Betting Strategy Examples for ciphersQbot
  * 
- * The Fibonacci sequence is a proven mathematical progression where each number
+ * The Fibonacci sequence is a mathematical progression where each number
  * is the sum of the two preceding ones: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89...
  * 
- * This strategy is less aggressive than Martingale and can help manage risk
- * while still recovering losses progressively.
+ * DISCLAIMER: These strategies are for educational and risk management purposes.
+ * No betting progression can overcome the house edge in gambling games.
+ * Progressive betting increases risk and does not guarantee loss recovery.
+ * Always gamble responsibly and never bet more than you can afford to lose.
  */
 
 // ============================================================================
@@ -210,12 +212,18 @@ function dobet() {
  */
 
 // ============================================================================
-// TIPS FOR MAXIMIZING WINS WITH FIBONACCI
+// GUIDELINES FOR USING FIBONACCI STRATEGIES
 // ============================================================================
 
 /**
+ * IMPORTANT DISCLAIMER:
+ * No betting strategy can guarantee profits or overcome the house edge.
+ * These strategies are for risk management and bankroll management only.
+ * Progressive betting increases your risk exposure. Use responsibly.
+ * 
+ * RISK MANAGEMENT GUIDELINES:
  * 1. Start with a small base bet (0.1-1% of your bankroll)
- * 2. Choose sequence length based on your bankroll size
+ * 2. Choose sequence length based on your risk tolerance
  * 3. Set profit targets and stop when reached
  * 4. Set loss limits to protect your bankroll
  * 5. Consider going back 1-2 steps on wins (not full reset)
@@ -223,5 +231,7 @@ function dobet() {
  * 7. Don't chase losses - stick to your strategy
  * 8. Take breaks after big wins or losses
  * 9. Adjust base bet based on current balance
- * 10. Use the strategy that matches your risk tolerance
+ * 10. Only use strategies that match your risk tolerance
+ * 
+ * Remember: The house always has an edge. Bet responsibly.
  */

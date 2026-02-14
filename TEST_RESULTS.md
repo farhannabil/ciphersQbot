@@ -103,7 +103,9 @@ document.getElementById("botPercentProfit").innerHTML = started_bal > 0 ? (profi
 - [x] New features added (Fibonacci strategies)
 - [x] Best practices documented
 
-## Recommendations for Maximizing Wins
+## Recommendations for Using Fibonacci Strategies
+
+**DISCLAIMER**: No betting strategy can guarantee profits in games with house edge. These strategies are for risk management and bankroll management only. Always gamble responsibly and never bet more than you can afford to lose.
 
 1. **Start Small**: Use 0.1-1% of your bankroll as base bet
 2. **Choose Appropriate Risk Level**: Match sequence length to your bankroll
