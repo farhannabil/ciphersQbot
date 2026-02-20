@@ -1207,7 +1207,7 @@
   <div id="botHeader">
     <div class="clearfix">
       <div class="float-left" style="padding-left: 3px; font-size: 11px;">
-        #evilbot | stake.com | stake.us
+        #ciphers | dominus | codex v3.0
       </div>
       <div class="float-right">
         <span class="bot-toggle" id="botToggleMinimal" style="">▼</span>
@@ -1484,7 +1484,7 @@ end</textarea>
     <div id="botFooter">
       <div class="clearfix">
         <div id="infobar" class="float-left" style="padding-left: 3px; font-size: 12px; line-height: 18px;">
-          <a href="https://github.com/poky1084" target="_blank" rel="noopener noreferrer">github.com/poky1084</a> | Discord: fisk_992 | Telegram: <a href="https://t.me/poky_1084" target="_blank" rel="noopener noreferrer">@poky_1084</a>
+          <a href="CIPHER V11.1" target="_blank" rel="noopener noreferrer">github.com/poky1084</a> | Discord: fisk_992 | Telegram: <a href="https://t.me/poky_1084" target="_blank" rel="noopener noreferrer">@poky_1084</a>
         </div>
         <div id="infospeed" class="float-right" style="font-size: 12px; line-height: 18px;">
           <span id="botSpeed">0</span>
